@@ -1,0 +1,134 @@
+.navbar {
+
+    background: $white;
+    width: 100%;
+    padding: 1rem !important;
+    justify-content: space-between !important;
+
+    .navbar-collapse {
+
+        flex-grow: 0;
+
+        .navbar-nav {
+
+            .nav-item {
+
+                &.active {
+                    
+                    a {
+                        color: $primary;
+                    }
+
+                }
+
+                .nav-link {
+
+                    color: $black;
+
+                    &:hover{
+                        color: $primary;
+                        transition: all .5s ease-in-out;
+                    }
+
+                }
+
+            }
+
+        }
+
+        .form-inline {
+
+            .btn {
+
+                &.btn-outline-primary {
+                    margin-left: 1rem;
+                }
+            
+            }
+
+        }
+
+    }
+        
+}
+
+.nav {
+
+    .nav-item {
+
+        .nav-link {
+            color: $grey;
+            font-size: 24px;
+        }
+
+    }
+
+}
+
+.btn {
+
+    &:focus,&:active {
+        outline: none !important;
+        box-shadow: none !important;
+     }
+
+    &.btn-outline-primary, &.btn-outline-light {
+        border-width: .2rem;
+        padding: 0.375rem 2rem;
+    }
+
+}
+
+.form-group {
+
+    label {
+        margin-left: 0.5rem;
+    }
+
+    label, input {
+        font-family: "PT Sans", sans-serif;
+        font-size: 14px;
+    }
+    
+    .btn {
+
+        &.btn-light {
+            background-color: $white;
+            margin-top: .5rem;
+            color: $primary;
+            border-radius: 0;
+        }
+
+    }
+}
+
+.breadcrumb {
+
+    background-color: $white !important;
+
+    .breadcrumb-item {
+
+        font-family: "PT Sans", sans-serif !important;
+
+        &.active {
+
+            color: $grey;
+
+        }
+
+        a {
+            font-size: 16px;
+            color: $primary;
+        }
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before{
+
+        font-family: 'FontAwesome';
+        color: $grey;
+        content: "\f105";
+        font-size: 16px;
+        
+    }
+
+}
