@@ -12,5 +12,38 @@
     <div id="reway">
     </div>
     <script src="bundle.js"></script>
+    <script>
+        
+        $("#newsletter").on("click", (e) => {
+
+            e.target.parentElement.remove();
+
+        })
+
+   $("#product-carousel").on("slide.bs.carousel", (e) => {
+
+        if(e.to){
+
+            $(`#${e.to}`).addClass("selected");
+
+        }
+
+        if(e.from){
+            $(`#${e.from}`).removeClass("selected");
+        }
+
+        if(e.from === 0){
+            $("#0").removeClass("selected");
+        }
+
+        if(e.to === 0){
+
+            $("#0").addClass("selected");
+
+        }
+
+   });
+
+    </script>
 </body>
 </html>

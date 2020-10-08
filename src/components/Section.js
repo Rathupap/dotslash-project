@@ -1,15 +1,105 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Select from 'react-select';
+import InputRange from 'react-input-range';
+import "react-input-range/lib/css/index.css";
 
 const Section = () => {
+
+    const brands = [
+        {
+            value: "Superbalist",
+            label: "SUPERBALIST"
+        },{
+            value: "Mango",
+            label: "MANGO"
+        },{
+            value: "Nike",
+            label: "NIKE"
+        }
+    ];
+
+    const [value, setValue] = useState({
+        min: 300,
+        max: 2000
+    })
+
+    const customStyles = {
+        option: () => ({
+            fontFamily: "PT Sans",
+            padding: ".6rem"
+        }),
+        select: () => ({
+            fontFamily: "PT Sans",
+            padding: ".3rem"
+        }),
+        multiValueRemove: () => ({
+            fontFamily: "PT Sans",
+            color: "#ffffff",
+            backgroundColor: "#00A2FF",
+            fontSize: "16px"
+        }),
+        multiValueLabel: () => ({
+            fontFamily: "PT Sans",
+            color: "#ffffff",
+            backgroundColor: "#00A2FF",
+            fontSize: "16px",
+            padding: ".3rem"
+        })
+    }
 
     return (
       <div className="row">
         <div className="col-lg-3 sidebar">
             <div className="search-form">
+                <div className="header">
+                    <span className="hide">
+                        <i className="fas fa-chevron-left"></i> Hide
+                    </span>
+                    <h3>SEARCH REWAY <i className="fas fa-search"></i></h3>
+                </div>
+                <div className="form">
+                    <form>
+                        <div className="form-group">
+                            <label htmlFor="size">BRANDS</label>
+                            <Select 
+                                styles={customStyles} 
+                                placeholder="Select Brand" 
+                                isMulti 
+                                options={brands}
+                                defaultValue={[brands[0], brands[1]]}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="size">COLOUR</label>
+                            <select className="form-control" id="size">
+                                <option>SELECT COLOUR</option>
+                                <option>BROWN</option>
+                                <option>PURPLE</option>
+                                <option>RED</option>
+                            </select>
+                        </div>
+                        <div className="form-group price-group">
+                            <label htmlFor="price" id="price">PRICE</label>
+                            <div id="slider">
+                                <InputRange 
+                                    value={value} maxValue={2500} minValue={0} onChange={(newValue) => {
+                                        setValue(newValue)
+                                    }} 
+                                />                      
+                            </div>
+                        </div>
+                        <div className="row justify-content-center">
+                            <button className="btn btn-primary">
+                                <i className="fas fa-search"></i>
+                                SEARCH
+                            </button>
+                        </div>      
+                    </form>
+                </div>
             </div>
             <img src="./images/Advert Banner.png" alt="Reway Banner"/>
             <div className="newsletter">
-                <i className="fas fa-times"></i>
+                <i className="fas fa-times" id="newsletter"></i>
                 <i className="fas fa-envelope"></i>
                 <h3>SIGN UP TO OUR MAILING LIST</h3>
                 <form>
@@ -23,7 +113,7 @@ const Section = () => {
                 </form>
             </div>
         </div>
-        <div className="col-lg-8">
+        <div className="col-lg-9">
             <div className="row top-banner align-items-center">
                 <div className="col-lg-4 offset-lg-1 banner-content">
                     <h2>SUMMER SALE!</h2>
@@ -57,7 +147,7 @@ const Section = () => {
                                         <img className="d-block w-100" src="./images/Main item Image 01.png" alt="Dylan Hiker 1" />
                                     </div>
                                     <div className="carousel-item">
-                                        <img className="d-block w-100" src="./images/Main item Image 04.png" alt="Dylan Hiker 2" />
+                                        <img className="d-block w-100" src="./images/Main item Image 02.png" alt="Dylan Hiker 2" />
                                     </div>
                                     <div className="carousel-item">
                                         <img className="d-block w-100" src="./images/Main item Image 03.png" alt="Dylan Hiker 3" />
@@ -77,17 +167,20 @@ const Section = () => {
                                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span className="sr-only">Next</span>
                                 </a>
+                                <div className="special">
+                                    <i className="fas fa-tag"></i> -40% off
+                                </div>
                             </div>
                             <div className="shoes">
-                                <div className="product-image selected" style={{background: `url("./images/Main item Image 01.png")`}}>
+                                <div id="0" className="product-image selected" style={{background: `url("./images/Main item Image 01.png")`}}>
                                 </div>
-                                <div className="product-image" style={{background: `url("./images/Main item Image 02.png")`}}>
+                                <div id="1" className="product-image" style={{background: `url("./images/Main item Image 02.png")`}}>
                                 </div>
-                                <div className="product-image" style={{background: `url("./images/Main item Image 03.png")`}}>
+                                <div id="2" className="product-image" style={{background: `url("./images/Main item Image 03.png")`}}>
                                 </div>
-                                <div className="product-image" style={{background: `url("./images/Main item Image 04.png")`}}>
+                                <div id="3" className="product-image" style={{background: `url("./images/Main item Image 04.png")`}}>
                                 </div>
-                                <div className="product-image" style={{background: `url("./images/Main item Image 05.png")`}}>
+                                <div id="4" className="product-image" style={{background: `url("./images/Main item Image 05.png")`}}>
                                 </div>
                             </div>
                         </div>
@@ -150,7 +243,7 @@ const Section = () => {
                                 </div>
                                 <div className="row">
                                     <div className="col-lg-9 offset-lg-3">
-                                        <div className="row special-details">
+                                        <div className="row special-details align-items-center">
                                             <div className="col-lg-6">
                                                 <div className="special">
                                                     <i className="fas fa-tag"></i> -40% off
@@ -191,9 +284,128 @@ const Section = () => {
                                 </form>
                             </div>
                         </div>
-                        <div className="row">
-                            <div className="col-lg-3">
-                                
+                    </div>
+                    <div className="row more-boots">
+                        <div className="col-lg-3">
+                            <h3>MORE FROM <span className="effect">BOOTS</span></h3>
+                        </div>
+                        <div className="col-lg-9">
+                            <div className="line">
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row other-boots">
+                        <div className="col-4 boot">
+                            <img src="./images/Boots 01.png" alt="HARGRAVE ANKLE BOOT"/>
+                            <div className="content">
+                                <div className="special">
+                                    <i className="fas fa-tag"></i> -40% off
+                                </div>
+                                <h4>HARGRAVE ANKLE BOOT</h4>
+                                <span className="light-text">
+                                    <i className="fas fa-store-alt"></i> SUPERBALIST
+                                </span>
+                                <div className="row">
+                                    <div className="col-lg-6">
+                                        <span className="price">R500</span>
+                                    </div>
+                                    <div className="col-lg-6">
+                                        <button className="btn btn-link">
+                                            View <i className="fas fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-4 boot">
+                            <img src="./images/Boots 02.png" alt="CAMERON LEATHER"/>
+                            <div className="content">
+                                <h4>CAMERON LEATHER</h4>
+                                <div className="low-stock">
+                                    LOW STOCK
+                                </div>
+                                <span className="light-text">
+                                    <i className="fas fa-store-alt"></i> SUPERBALIST
+                                </span>
+                                <div className="row">
+                                    <div className="col-lg-6">
+                                        <span className="price">R539</span>
+                                    </div>
+                                    <div className="col-lg-6">
+                                        <button className="btn btn-link">
+                                            View <i className="fas fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-4 boot">
+                            <img src="./images/Boots 03.png" alt="HGRAYSON BROGUE"/>
+                            <div className="content">
+                                <h4>GRAYSON BROGUE</h4>
+                                <div className="low-stock">
+                                    LOW STOCK
+                                </div>
+                                <div className="special">
+                                    <i className="fas fa-tag"></i> -40% off
+                                </div>
+                                <span className="light-text">
+                                    <i className="fas fa-store-alt"></i> SUPERBALIST
+                                </span>
+                                <div className="row">
+                                    <div className="col-lg-6">
+                                        <span className="price">R420</span>
+                                    </div>
+                                    <div className="col-lg-6">
+                                        <button className="btn btn-link">
+                                            View <i className="fas fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-4 boot">
+                            <img src="./images/Boots 04.png" alt="ORCA"/>
+                            <div className="content">
+                                <h4>ORCA</h4>
+                                <div className="special">
+                                    <i className="fas fa-tag"></i> -40% off
+                                </div>
+                                <div className="low-stock">
+                                    LOW STOCK
+                                </div>
+                                <span className="light-text">
+                                    <i className="fas fa-store-alt"></i> SUPERBALIST
+                                </span>
+                                <div className="row">
+                                    <div className="col-lg-6">
+                                        <span className="price">R500</span>
+                                    </div>
+                                    <div className="col-lg-6">
+                                        <button className="btn btn-link">
+                                            View <i className="fas fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-4 boot">
+                            <img src="./images/Boots 05.png" alt="JEAN HIKER BOOTS"/>
+                            <div className="content">
+                                <h4>JEAN HIKER BOOTS</h4>
+                                <span className="light-text">
+                                    <i className="fas fa-store-alt"></i> SUPERBALIST
+                                </span>
+                                <div className="row">
+                                    <div className="col-lg-6">
+                                        <span className="price">R600</span>
+                                    </div>
+                                    <div className="col-lg-6">
+                                        <button className="btn btn-link">
+                                            View <i className="fas fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
