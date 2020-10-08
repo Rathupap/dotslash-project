@@ -115,11 +115,11 @@ const Section = () => {
         </div>
         <div className="col-lg-9">
             <div className="row top-banner align-items-center">
-                <div className="col-lg-4 offset-lg-1 banner-content">
+                <div className="col-lg-4 offset-lg-1 col-6 banner-content">
                     <h2>SUMMER SALE!</h2>
                     <h4>UP TO 50% OFF!</h4>
                 </div>
-                <div className="col-lg-4 offset-lg-2 banner-button">
+                <div className="col-lg-4 offset-lg-2 col-6 banner-button">
                     <button className="btn btn-outline-light" type="button">SHOP NOW</button>
                 </div>
             </div>

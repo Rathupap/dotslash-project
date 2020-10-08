@@ -40,6 +40,12 @@ img {
     background-color: $charcoal;
     padding: 4rem 0;
 
+    @include media-breakpoint-down(sm) { 
+
+        justify-content: center;
+
+    }
+
     h3 {
         color: $white;
         font-size: 20px;
@@ -74,6 +80,23 @@ img {
 
     }
 
+    .follow, .company, .account {
+
+        @include media-breakpoint-down(md) { 
+
+            margin-bottom: 2rem;
+
+        }
+    }
+
+    .account {
+
+        order: 2;
+
+    }
+
+
+
 }
 
 .top-banner {
@@ -94,6 +117,12 @@ img {
             font-size:20px;
         }
         
+    }
+
+    @include media-breakpoint-down(md) { 
+
+        margin: 1rem 0;
+
     }
 
 }
@@ -485,11 +514,24 @@ img {
 
     }
 
+    @include media-breakpoint-down(md) { 
+
+        order: 1;
+        margin: 0;
+
+    }
+
 }
 
 .sidebar {
 
     margin-bottom: 2rem;
+
+    @include media-breakpoint-down(md) { 
+
+        order: 2;
+
+     }
 
     .side-ad {
         width: 100%;
