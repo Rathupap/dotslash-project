@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="row footer">
             <div className="container">
                 <div className="row">
-                    <div className=" offset-lg-1 col-lg-3 col-8 account">
+                    <div className=" offset-lg-1 col-lg-3 col-6 account">
                         <h3>Account</h3>
                         <ul className="nav flex-column">
                             <li className="nav-item">
@@ -20,7 +20,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="col-lg-3 col-8 company">
+                    <div className="col-lg-3 col-6 company">
                         <h3>The Company</h3>
                         <ul className="nav flex-column">
                             <li className="nav-item">
@@ -34,7 +34,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="col-lg-2 offset-lg-3 col-4 follow">
+                    <div className="col-lg-2 offset-lg-3 col-6 follow">
                         <h3>Follow us!</h3>
                         <div className="socials">
                             <a href="#"><i className="fab fa-facebook-square"></i></a>

@@ -115,11 +115,11 @@ const Section = () => {
         </div>
         <div className="col-lg-9">
             <div className="row top-banner align-items-center">
-                <div className="col-lg-4 offset-lg-1 col-6 banner-content">
+                <div className="col-lg-4 offset-lg-1 col-md-6 col-12 banner-content">
                     <h2>SUMMER SALE!</h2>
                     <h4>UP TO 50% OFF!</h4>
                 </div>
-                <div className="col-lg-4 offset-lg-2 col-6 banner-button">
+                <div className="col-lg-4 offset-lg-2 col-md-6 col-12 banner-button">
                     <button className="btn btn-outline-light" type="button">SHOP NOW</button>
                 </div>
             </div>
@@ -133,7 +133,7 @@ const Section = () => {
                         </ol>
                     </nav>
                     <div className="row">
-                        <div className="col-lg-6 product-image">
+                        <div className="col-lg-6 product-image col-md-6">
                             <div id="product-carousel" className="carousel slide" data-ride="carousel">
                                 <ol className="carousel-indicators">
                                     <li data-target="#product-carousel" data-slide-to="0" className="active"></li>
@@ -184,7 +184,7 @@ const Section = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 col-md-6">
                             <div className="product-information">
                                 <h3>DYLAN HIKER BOOT</h3>
                                 <span className="light-text">
@@ -295,7 +295,7 @@ const Section = () => {
                         </div>
                     </div>
                     <div className="row other-boots">
-                        <div className="col-4 boot">
+                        <div className="col-md-4 col-6 boot">
                             <img src="./images/Boots 01.png" alt="HARGRAVE ANKLE BOOT"/>
                             <div className="content">
                                 <div className="special">
@@ -306,10 +306,10 @@ const Section = () => {
                                     <i className="fas fa-store-alt"></i> SUPERBALIST
                                 </span>
                                 <div className="row">
-                                    <div className="col-lg-6">
+                                    <div className="col-sm-6 col-3">
                                         <span className="price">R500</span>
                                     </div>
-                                    <div className="col-lg-6">
+                                    <div className="col-sm-6 col-9">
                                         <button className="btn btn-link">
                                             View <i className="fas fa-arrow-right"></i>
                                         </button>
@@ -317,7 +317,7 @@ const Section = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-4 boot">
+                        <div className="col-md-4 col-6 boot">
                             <img src="./images/Boots 02.png" alt="CAMERON LEATHER"/>
                             <div className="content">
                                 <h4>CAMERON LEATHER</h4>
@@ -328,10 +328,10 @@ const Section = () => {
                                     <i className="fas fa-store-alt"></i> SUPERBALIST
                                 </span>
                                 <div className="row">
-                                    <div className="col-lg-6">
+                                    <div className="col-sm-6 col-3">
                                         <span className="price">R539</span>
                                     </div>
-                                    <div className="col-lg-6">
+                                    <div className="col-sm-6 col-9">
                                         <button className="btn btn-link">
                                             View <i className="fas fa-arrow-right"></i>
                                         </button>
@@ -339,7 +339,7 @@ const Section = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-4 boot">
+                        <div className="col-md-4 col-6 boot">
                             <img src="./images/Boots 03.png" alt="HGRAYSON BROGUE"/>
                             <div className="content">
                                 <h4>GRAYSON BROGUE</h4>
@@ -353,10 +353,10 @@ const Section = () => {
                                     <i className="fas fa-store-alt"></i> SUPERBALIST
                                 </span>
                                 <div className="row">
-                                    <div className="col-lg-6">
+                                    <div className="col-sm-6 col-3">
                                         <span className="price">R420</span>
                                     </div>
-                                    <div className="col-lg-6">
+                                    <div className="col-sm-6 col-9">
                                         <button className="btn btn-link">
                                             View <i className="fas fa-arrow-right"></i>
                                         </button>
@@ -364,7 +364,7 @@ const Section = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-4 boot">
+                        <div className="col-md-4 col-6 boot">
                             <img src="./images/Boots 04.png" alt="ORCA"/>
                             <div className="content">
                                 <h4>ORCA</h4>
@@ -378,10 +378,10 @@ const Section = () => {
                                     <i className="fas fa-store-alt"></i> SUPERBALIST
                                 </span>
                                 <div className="row">
-                                    <div className="col-lg-6">
+                                    <div className="col-sm-6 col-3">
                                         <span className="price">R500</span>
                                     </div>
-                                    <div className="col-lg-6">
+                                    <div className="col-sm-6 col-9">
                                         <button className="btn btn-link">
                                             View <i className="fas fa-arrow-right"></i>
                                         </button>
@@ -389,7 +389,7 @@ const Section = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-4 boot">
+                        <div className="col-md-4 col-6 boot">
                             <img src="./images/Boots 05.png" alt="JEAN HIKER BOOTS"/>
                             <div className="content">
                                 <h4>JEAN HIKER BOOTS</h4>
@@ -397,10 +397,10 @@ const Section = () => {
                                     <i className="fas fa-store-alt"></i> SUPERBALIST
                                 </span>
                                 <div className="row">
-                                    <div className="col-lg-6">
+                                    <div className="col-sm-6 col-3">
                                         <span className="price">R600</span>
                                     </div>
-                                    <div className="col-lg-6">
+                                    <div className="col-sm-6 col-9">
                                         <button className="btn btn-link">
                                             View <i className="fas fa-arrow-right"></i>
                                         </button>

@@ -24,13 +24,57 @@ img {
     padding: 2rem 0;
     margin: 1rem 0;
 
+    @include media-breakpoint-down(sm) { 
+
+        padding: 1rem;
+
+    }
+
     h2 {
         color: $grey;
         font-size: 17px;
+
+        @include media-breakpoint-down(sm) { 
+
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 2rem;
+
+        }
+
+    }
+
+    .links {
+
+        text-align: center;
+
     }
 
     .btn-link {
         color: $grey;
+    }
+
+}
+
+.nav {
+
+    .nav-item {
+
+        .nav-link {
+            color: $grey;
+            font-size: 24px;
+        }
+
+    }
+
+    &.icons-nav{
+
+        @include media-breakpoint-down(md) { 
+
+            display: none;
+    
+        }
+
     }
 
 }
@@ -40,9 +84,10 @@ img {
     background-color: $charcoal;
     padding: 4rem 0;
 
-    @include media-breakpoint-down(sm) { 
+    @include media-breakpoint-down(md) { 
 
         justify-content: center;
+        padding: 2rem 0;
 
     }
 
@@ -80,7 +125,7 @@ img {
 
     }
 
-    .follow, .company, .account {
+    .company, .account {
 
         @include media-breakpoint-down(md) { 
 
@@ -88,14 +133,6 @@ img {
 
         }
     }
-
-    .account {
-
-        order: 2;
-
-    }
-
-
 
 }
 
@@ -116,7 +153,22 @@ img {
         h4 {
             font-size:20px;
         }
+
+        @include media-breakpoint-down(sm) { 
+
+            text-align: center;
+
+        }
         
+    }
+
+    .banner-button {
+
+        @include media-breakpoint-down(sm) { 
+
+            text-align: center;
+
+        }
     }
 
     @include media-breakpoint-down(md) { 
@@ -186,6 +238,14 @@ img {
                     i {
                         margin-right: .2rem;
                     }
+
+                    @include media-breakpoint-down(sm) { 
+
+                        font-size: 14px;
+                        margin: .5rem 1rem;
+                        right: .5rem;
+
+                    }
                 
                 }
     
@@ -203,6 +263,10 @@ img {
                     left: 0;
                     padding: .3rem;
                     margin-left: 1.3rem;
+
+                    @include media-breakpoint-down(sm) { 
+                        top: 3rem;
+                    }
     
                 }
         
@@ -227,6 +291,10 @@ img {
                     font-weight: 700;
                     color: $grey; 
                     font-family: "PT Sans", sans-serif;
+
+                    @include media-breakpoint-down(sm) { 
+                        margin-left: 0.3rem;
+                    }
         
                     &:hover {
                         text-decoration: none;
@@ -235,8 +303,12 @@ img {
                     i {
                         display: inline-block;
                         margin-left: 1rem;
+
+                        @include media-breakpoint-down(sm) { 
+                            margin-left: 0.3rem;
+                        }
                     }
-        
+    
                     }
                 }
 
@@ -529,7 +601,7 @@ img {
 
     @include media-breakpoint-down(md) { 
 
-        order: 2;
+        display: none;
 
      }
 
